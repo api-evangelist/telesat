@@ -1,0 +1,73 @@
+generated: '2026-09-23'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 5
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - support
+  - website
+hosts:
+- host: api.telesat.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: telesat.com
+  role: api
+  relation: own
+- host: app.telesat.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: telesat.com
+  role: other
+  relation: own
+- host: support.telesat.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Support
+  serves: []
+  registrable_domain: telesat.com
+  role: support
+  relation: own
+- host: telesat.com
+  found_by:
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: telesat.com
+  role: other
+  relation: own
+- host: www.telesat.com
+  found_by:
+  - pointer
+  - vendor-detect
+  types:
+  - Newsroom
+  - Website
+  - Blog
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - hosting
+  vendor: wpengine
+  registrable_domain: telesat.com
+  role: website
+  relation: own
